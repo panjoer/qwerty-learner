@@ -21,11 +21,9 @@ jobs:
         run: yarn
       - name: Build page
         run: yarn build
-      - name: 部署到Github
-        uses: JamesIves/github-pages-deploy-action@v4
+        
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: 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
-          repository-name: panjoer/learner2
-          branch: main
-          folder: public
-          commit-message: "${{ github.event.head_commit.message }} Updated By Github Actions"
+          deploy_key: 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
+          publish_dir: ./build
