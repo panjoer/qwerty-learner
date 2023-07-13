@@ -22,11 +22,11 @@ jobs:
       - name: Build page
         run: yarn build
         
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: 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
-          publish_dir: ./build
+#       - name: Deploy to gh-pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           deploy_key: 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
+#           publish_dir: ./build
           
       - name: 部署到Github
         uses: JamesIves/github-pages-deploy-action@v4
